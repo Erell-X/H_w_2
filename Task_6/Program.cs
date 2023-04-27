@@ -5,13 +5,7 @@
 // 78 -> третьей цифры нет
 // 32679 -> 6
 
-using System;
-
-class Program6 {
-
-  static void Main() {
-
-  int Num, Res, lastFigure;
+int Num, Res, lastFigure;
   
   lastFigure = 0;
   Res = 0;
@@ -41,25 +35,7 @@ class Program6 {
   
     if (Res > 99 && Res < 1000)
     {
-    lastFigure = Num % 10;
-    Console.WriteLine($"Третья цифра заданного числа равнаус {lastFigure}");
+    lastFigure = Res % 10;
+    Console.WriteLine($"Третья цифра заданного числа равна {lastFigure}");
     }
   }
-  
-  // else if (Num > 999)
-  // {
-  //   Res = Num / 10; 
-    
-  //   if (Res > 99 && Res < 1000)
-  // {
-  //   lastFigure = Num % 10;
-    
-  //   Console.WriteLine($"Третья цифра заданного числа равна {lastFigure}");
-  // }
-    
-  // }
-  
- 
-  }
-  
-}
