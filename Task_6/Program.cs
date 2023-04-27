@@ -1,4 +1,4 @@
-﻿// Задача 13: Напишите программу, которая выводит третью цифру заданного числа 
+// Задача 13: Напишите программу, которая выводит третью цифру заданного числа 
 // или сообщает, что третьей цифры нет.
 
 // 645 -> 5
@@ -14,28 +14,51 @@ class Program6 {
   int Num, Res, lastFigure;
   
   lastFigure = 0;
+  Res = 0;
   
   Console.Clear();
   Console.WriteLine("Введите число: ");
   Num = Convert.ToInt32(Console.ReadLine());
   
-  if (Num/100 >= 1 && Num/100 <= 9)
+  Res = Num;
+  
+  if (Num > 99 && Num < 1000)
   {
     lastFigure = Num % 10;
     
     Console.WriteLine($"Третья цифра заданного числа равна {lastFigure}");
   }
   
-  else if (Num/100 > 10)
-  {
-    Res = Num / 10 
-  }
-  
-  else if (Num/100 < 1)
+  else if (Num < 100)
   {
     Console.WriteLine("Третьей цифры у заданного числа нет");
   }
-
+  
+  
+  while (Res > 999)
+  {
+    Res = Res / 10;
+  
+    if (Res > 99 && Res < 1000)
+    {
+    lastFigure = Num % 10;
+    Console.WriteLine($"Третья цифра заданного числа равнаус {lastFigure}");
+    }
+  }
+  
+  // else if (Num > 999)
+  // {
+  //   Res = Num / 10; 
+    
+  //   if (Res > 99 && Res < 1000)
+  // {
+  //   lastFigure = Num % 10;
+    
+  //   Console.WriteLine($"Третья цифра заданного числа равна {lastFigure}");
+  // }
+    
+  // }
+  
  
   }
   
